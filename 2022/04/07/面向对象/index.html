@@ -6,15 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="面向对象概念援引链接：https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;28427324 学习编程， 基本功是掌握编程语言，但编程的本质是逻辑，所以编程思维的培养也很重要。面向过程和面向对象是两种重要的编程思想，下面讲述一下这两者的区别和优缺点比较。 1. 面向过程面向过程是一种以事件为中心的编程思想，编程的时候把解决问题的步骤分析出来，然后用函数把这些步骤实现，在一步一步的具体步骤中再按">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/index.html">
+<meta property="og:url" content="http://example.com/2022/04/07/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="面向对象概念援引链接：https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;28427324 学习编程， 基本功是掌握编程语言，但编程的本质是逻辑，所以编程思维的培养也很重要。面向过程和面向对象是两种重要的编程思想，下面讲述一下这两者的区别和优缺点比较。 1. 面向过程面向过程是一种以事件为中心的编程思想，编程的时候把解决问题的步骤分析出来，然后用函数把这些步骤实现，在一步一步的具体步骤中再按">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-03ff081024bb06cfd447abf321b73b26_720w.png">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-2ffc00ebac5803d6fc9caa15694fe062_720w.png">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-f7dc9b59e9a5dfb562821db675a1c341_720w.jpg">
+<meta property="article:published_time" content="2022-04-07T08:27:15.100Z">
+<meta property="article:modified_time" content="2022-04-07T08:34:22.542Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic3.zhimg.com/80/v2-03ff081024bb06cfd447abf321b73b26_720w.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,196 +158,173 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-面向对象" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="面向对象概念"><a href="#面向对象概念" class="headerlink" title="面向对象概念"></a>面向对象概念</h2><p>援引链接：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/28427324">https://zhuanlan.zhihu.com/p/28427324</a></p>
+<p>学习编程， 基本功是掌握编程语言，但编程的本质是逻辑，所以编程思维的培养也很重要。面向过程和面向对象是两种重要的编程思想，下面讲述一下这两者的区别和优缺点比较。</p>
+<h2 id="1-面向过程"><a href="#1-面向过程" class="headerlink" title="1. 面向过程"></a>1. 面向过程</h2><p>面向过程是一种以事件为中心的编程思想，编程的时候把解决问题的步骤分析出来，然后用函数把这些步骤实现，在一步一步的具体步骤中再按顺序调用函数。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-03ff081024bb06cfd447abf321b73b26_720w.png" alt="img"></p>
+<p>举个例子，下五子棋，面向过程的设计思路是首先分析解决这个问题的步骤：</p>
+<p>（1）开始游戏（2）黑子先走（3）绘制画面（4）判断输赢（5）轮到白子（6）绘制画面（7）判断输赢（8）返回步骤（2） （9）输出最后结果。</p>
+<p>用函数实现上面一个一个的步骤，然后在下五子棋的主函数里依次调用上面的函数（不同的编程语言有不同的调用方法，我这里写的是直接调用）：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">下五子棋&#123;</span><br><span class="line"></span><br><span class="line">开始游戏（）；</span><br><span class="line"></span><br><span class="line">黑子先走（）；</span><br><span class="line"></span><br><span class="line">绘制画面（）；</span><br><span class="line"></span><br><span class="line">判断输赢（）；</span><br><span class="line"></span><br><span class="line">轮到白子（）；</span><br><span class="line"></span><br><span class="line">绘制画面（）；</span><br><span class="line"></span><br><span class="line">判断输赢（）；</span><br><span class="line"></span><br><span class="line">返回到 黑子先走（）；</span><br><span class="line"></span><br><span class="line">输出最后结果；</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>可见，面向过程始终关注的是怎么一步一步地判断棋局输赢的，通过控制代码，从而实现函数的顺序执行。</p>
+<h2 id="2-面向对象"><a href="#2-面向对象" class="headerlink" title="2. 面向对象"></a>2. 面向对象</h2><p>在日常生活或编程中，简单的问题可以用面向过程的思路来解决，直接有效，但是当问题的规模变得更大时，用面向过程的思想是远远不够的。所以慢慢就出现了面向对象的编程思想。世界上有很多人和事物，每一个都可以看做一个对象，而每个对象都有自己的属性和行为，对象与对象之间通过方法来交互。面向对象是一种以“对象”为中心的编程思想，把要解决的问题分解成各个对象，建立对象的目的不是为了完成一个步骤，而是为了描叙某个对象在整个解决问题的步骤中的属性和行为。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-2ffc00ebac5803d6fc9caa15694fe062_720w.png" alt="img"></p>
+<p>在下五子棋的例子中，用面向对象的方法来解决的话，首先将整个五子棋游戏分为三个对象:</p>
+<p>（1）黑白双方，这两方的行为是一样的。</p>
+<p>（2）棋盘系统，负责绘制画面</p>
+<p>（3）规则系统，负责判定犯规、输赢等。</p>
+<p>然后赋予每个对象一些属性和行为：     </p>
+<p>（4）第一类对象（黑白双方）负责接受用户输入，并告知第二类对象（棋盘系统）棋子布局的变化，棋盘系统接收到了棋子的变化，并负责在屏幕上面显示出这种变化，同时利用第三类对象（规则系统）来对棋局进行判定。</p>
+<p>可以看出，面向对象是以功能来划分问题，而不是以步骤解决。比如绘制画面这个行为，在面向过程中是分散在了多个步骤中的，可能会出现不同的绘制版本，所以要考虑到实际情况进行各种各样的简化。而面向对象的设计中，绘图只可能在棋盘系统这个对象中出现，从而保证了绘图的统一。</p>
+<h2 id="3-优缺点比较"><a href="#3-优缺点比较" class="headerlink" title="3. 优缺点比较"></a>3. 优缺点比较</h2><h2 id="面向过程"><a href="#面向过程" class="headerlink" title="面向过程"></a>面向过程</h2><p>优点：</p>
+<p>流程化使得编程任务明确，在开发之前基本考虑了实现方式和最终结果，具体步骤清楚，便于节点分析。</p>
+<p>效率高，面向过程强调代码的短小精悍，善于结合数据结构来开发高效率的程序。</p>
+<p>缺点：</p>
+<p>需要深入的思考，耗费精力，代码重用性低，扩展能力差，后期维护难度比较大。</p>
+<h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><p>优点:</p>
+<p>结构清晰，程序是模块化和结构化，更加符合人类的思维方式；</p>
+<p>易扩展，代码重用率高，可继承，可覆盖，可以设计出低耦合的系统；</p>
+<p>易维护，系统低耦合的特点有利于减少程序的后期维护工作量。</p>
+<p>缺点：</p>
+<p>开销大，当要修改对象内部时，对象的属性不允许外部直接存取，所以要增加许多没有其他意义、只负责读或写的行为。这会为编程工作增加负担，增加运行开销，并且使程序显得臃肿。</p>
+<p>性能低，由于面向更高的逻辑抽象层，使得面向对象在实现的时候，不得不做出性能上面的牺牲，计算时间和空间存储大小都开销很大。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-f7dc9b59e9a5dfb562821db675a1c341_720w.jpg" alt="img"></p>
+<p>举例说明两者的优缺点，比如在五子棋游戏中增加悔棋的功能。在面向过程中，从输入到显示再到最后判断的整个步骤都要改动，甚至函数的调用顺序也要改动，而在面向对象的设计中，只需在棋盘系统中增加一个回溯的功能就可以了，黑白双方和规则系统的属性和行为都不需改动。这个例子说明了面向对象程序设计中代码间的相关性低（低耦合特性），使得代码很容易被复用和扩展，同时也说明了面向过程的代码重用性低、扩展能力差。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/04/07/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" class="archive-article-date">
-  	<time datetime="2022-04-07T08:27:15.100Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-04-07</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/04/07/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/04/07/vuejs%E6%8F%92%E5%80%BC/" class="archive-article-date">
-  	<time datetime="2022-04-07T08:27:15.097Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-04-07</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/04/07/v-model/" class="archive-article-date">
-  	<time datetime="2022-04-07T08:27:15.094Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-04-07</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+  
+    <a href="/2022/04/07/vuejs%E6%8F%92%E5%80%BC/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/04/07/JavaScript%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2022-04-07T08:27:15.039Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-04-07</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/04/07/click%E7%82%B9%E5%87%BB%E4%BA%8B%E4%BB%B6/" class="archive-article-date">
-  	<time datetime="2022-04-07T08:27:15.035Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-04-07</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        
+        
+    </div>
+</aside>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/04/07/let%E5%92%8Cvar%E7%9A%84%E5%8C%BA%E5%88%AB%E5%8F%8A%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F/" class="archive-article-date">
-  	<time datetime="2022-04-07T08:27:15.033Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-04-07</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/04/07/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B01/" class="archive-article-date">
-  	<time datetime="2022-04-07T08:27:14.978Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-04-07</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/04/05/hello-world/" class="archive-article-date">
-  	<time datetime="2022-04-05T06:12:09.559Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-04-05</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/04/05/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -362,8 +347,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

@@ -152,27 +152,44 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-blog-test" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-面向对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/04/05/blog-test/">blog-test</a>
-    </h1>
-  
-
-        
-        <a href="/2022/04/05/blog-test/" class="archive-article-date">
-  	<time datetime="2022-04-05T06:17:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-04-05</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="one"><a href="#one" class="headerlink" title="one"></a>one</h2><h3 id="constant"><a href="#constant" class="headerlink" title="constant"></a>constant</h3><p>test</p>
+        <h2 id="面向对象概念"><a href="#面向对象概念" class="headerlink" title="面向对象概念"></a>面向对象概念</h2><p>援引链接：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/28427324">https://zhuanlan.zhihu.com/p/28427324</a></p>
+<p>学习编程， 基本功是掌握编程语言，但编程的本质是逻辑，所以编程思维的培养也很重要。面向过程和面向对象是两种重要的编程思想，下面讲述一下这两者的区别和优缺点比较。</p>
+<h2 id="1-面向过程"><a href="#1-面向过程" class="headerlink" title="1. 面向过程"></a>1. 面向过程</h2><p>面向过程是一种以事件为中心的编程思想，编程的时候把解决问题的步骤分析出来，然后用函数把这些步骤实现，在一步一步的具体步骤中再按顺序调用函数。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-03ff081024bb06cfd447abf321b73b26_720w.png" alt="img"></p>
+<p>举个例子，下五子棋，面向过程的设计思路是首先分析解决这个问题的步骤：</p>
+<p>（1）开始游戏（2）黑子先走（3）绘制画面（4）判断输赢（5）轮到白子（6）绘制画面（7）判断输赢（8）返回步骤（2） （9）输出最后结果。</p>
+<p>用函数实现上面一个一个的步骤，然后在下五子棋的主函数里依次调用上面的函数（不同的编程语言有不同的调用方法，我这里写的是直接调用）：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">下五子棋&#123;</span><br><span class="line"></span><br><span class="line">开始游戏（）；</span><br><span class="line"></span><br><span class="line">黑子先走（）；</span><br><span class="line"></span><br><span class="line">绘制画面（）；</span><br><span class="line"></span><br><span class="line">判断输赢（）；</span><br><span class="line"></span><br><span class="line">轮到白子（）；</span><br><span class="line"></span><br><span class="line">绘制画面（）；</span><br><span class="line"></span><br><span class="line">判断输赢（）；</span><br><span class="line"></span><br><span class="line">返回到 黑子先走（）；</span><br><span class="line"></span><br><span class="line">输出最后结果；</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>可见，面向过程始终关注的是怎么一步一步地判断棋局输赢的，通过控制代码，从而实现函数的顺序执行。</p>
+<h2 id="2-面向对象"><a href="#2-面向对象" class="headerlink" title="2. 面向对象"></a>2. 面向对象</h2><p>在日常生活或编程中，简单的问题可以用面向过程的思路来解决，直接有效，但是当问题的规模变得更大时，用面向过程的思想是远远不够的。所以慢慢就出现了面向对象的编程思想。世界上有很多人和事物，每一个都可以看做一个对象，而每个对象都有自己的属性和行为，对象与对象之间通过方法来交互。面向对象是一种以“对象”为中心的编程思想，把要解决的问题分解成各个对象，建立对象的目的不是为了完成一个步骤，而是为了描叙某个对象在整个解决问题的步骤中的属性和行为。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-2ffc00ebac5803d6fc9caa15694fe062_720w.png" alt="img"></p>
+<p>在下五子棋的例子中，用面向对象的方法来解决的话，首先将整个五子棋游戏分为三个对象:</p>
+<p>（1）黑白双方，这两方的行为是一样的。</p>
+<p>（2）棋盘系统，负责绘制画面</p>
+<p>（3）规则系统，负责判定犯规、输赢等。</p>
+<p>然后赋予每个对象一些属性和行为：     </p>
+<p>（4）第一类对象（黑白双方）负责接受用户输入，并告知第二类对象（棋盘系统）棋子布局的变化，棋盘系统接收到了棋子的变化，并负责在屏幕上面显示出这种变化，同时利用第三类对象（规则系统）来对棋局进行判定。</p>
+<p>可以看出，面向对象是以功能来划分问题，而不是以步骤解决。比如绘制画面这个行为，在面向过程中是分散在了多个步骤中的，可能会出现不同的绘制版本，所以要考虑到实际情况进行各种各样的简化。而面向对象的设计中，绘图只可能在棋盘系统这个对象中出现，从而保证了绘图的统一。</p>
+<h2 id="3-优缺点比较"><a href="#3-优缺点比较" class="headerlink" title="3. 优缺点比较"></a>3. 优缺点比较</h2><h2 id="面向过程"><a href="#面向过程" class="headerlink" title="面向过程"></a>面向过程</h2><p>优点：</p>
+<p>流程化使得编程任务明确，在开发之前基本考虑了实现方式和最终结果，具体步骤清楚，便于节点分析。</p>
+<p>效率高，面向过程强调代码的短小精悍，善于结合数据结构来开发高效率的程序。</p>
+<p>缺点：</p>
+<p>需要深入的思考，耗费精力，代码重用性低，扩展能力差，后期维护难度比较大。</p>
+<h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><p>优点:</p>
+<p>结构清晰，程序是模块化和结构化，更加符合人类的思维方式；</p>
+<p>易扩展，代码重用率高，可继承，可覆盖，可以设计出低耦合的系统；</p>
+<p>易维护，系统低耦合的特点有利于减少程序的后期维护工作量。</p>
+<p>缺点：</p>
+<p>开销大，当要修改对象内部时，对象的属性不允许外部直接存取，所以要增加许多没有其他意义、只负责读或写的行为。这会为编程工作增加负担，增加运行开销，并且使程序显得臃肿。</p>
+<p>性能低，由于面向更高的逻辑抽象层，使得面向对象在实现的时候，不得不做出性能上面的牺牲，计算时间和空间存储大小都开销很大。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-f7dc9b59e9a5dfb562821db675a1c341_720w.jpg" alt="img"></p>
+<p>举例说明两者的优缺点，比如在五子棋游戏中增加悔棋的功能。在面向过程中，从输入到显示再到最后判断的整个步骤都要改动，甚至函数的调用顺序也要改动，而在面向对象的设计中，只需在棋盘系统中增加一个回溯的功能就可以了，黑白双方和规则系统的属性和行为都不需改动。这个例子说明了面向对象程序设计中代码间的相关性低（低耦合特性），使得代码很容易被复用和扩展，同时也说明了面向过程的代码重用性低、扩展能力差。</p>
 
       
 
@@ -185,7 +202,336 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2022/04/05/blog-test/">展开全文 >></a>
+          <a class="article-more-a" href="/2022/04/07/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-vuejs插值" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Vue-js学习笔记"><a href="#Vue-js学习笔记" class="headerlink" title="Vue.js学习笔记"></a>Vue.js学习笔记</h2><h3 id="一、Mustache语法及其他"><a href="#一、Mustache语法及其他" class="headerlink" title="一、Mustache语法及其他"></a>一、Mustache语法及其他</h3><p>双大括号：，</p>
+<p>用法：插入到标签里，如：<h2><h2/>，标签里可插入多个</p>
+<p>特点：响应式</p>
+<h4 id="1-v-once"><a href="#1-v-once" class="headerlink" title="1. v-once"></a>1. v-once</h4><p>只将元素渲染一次，不会随着数据的改变而改变</p>
+<p>如：<h2 v-once><h2/></p>
+<h4 id="2-v-html"><a href="#2-v-html" class="headerlink" title="2. v-html"></a>2. v-html</h4><p>会将html代码完整代入，具备html的功能</p>
+<p>如：<h2 v-html= "变量"><h2/></p>
+<h4 id="3-v-cloak"><a href="#3-v-cloak" class="headerlink" title="3. v-cloak"></a>3. v-cloak</h4><h4 id="4-v-model"><a href="#4-v-model" class="headerlink" title="4. v-model"></a>4. v-model</h4><img src="C:\Users\CMQ\AppData\Roaming\Typora\typora-user-images\image-20210331204901604.png" alt="image-20210331204901604" style="zoom:%;" />
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/04/07/vuejs%E6%8F%92%E5%80%BC/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-v-model" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="C:\Users\CMQ\AppData\Roaming\Typora\typora-user-images\image-20210331204901604.png" alt="image-20210331204901604"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/04/07/v-model/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-JavaScript高阶函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="filter、map和reduce函数"><a href="#filter、map和reduce函数" class="headerlink" title="filter、map和reduce函数"></a>filter、map和reduce函数</h3><p>filter函数：返回一个布尔值（true 、false）,true就将n添加到一个新的数组，false就跳过继续判断下一个值。</p>
+<p>let newNums &#x3D; nums.filter(function(n){</p>
+<p>​    return n&lt;100;    </p>
+<p>})</p>
+<p>map函数：遍历返回一个计数值并添加到一个新的数组。</p>
+<p>let newNums1 &#x3D; newNums.map(function(n){</p>
+<p>​    return n*2;</p>
+<p>})</p>
+<p>reduce函数：含有两个参数，每次返回计数值作为参数previousValue </p>
+<p>let total &#x3D; newNums1.reduce(function(prevalue,n){</p>
+<p>​    reduce prevalue + n;</p>
+<p>}),0)   </p>
+<p>​    初始值可以是任何数字或变量，只使用一次，视功能而定，这里是0。 其中n为所用数组中的数字，以上函数皆是，遍历次数等于数组中数字的个数。</p>
+<p>简便写法：</p>
+<p>let total &#x3D; nums.filter(function(n){</p>
+<p>return n&lt;100;</p>
+<p>}).map(function(n){</p>
+<p>return n*2</p>
+<p>}).reduce(function(prevalue,n){</p>
+<p>return prevalue + n</p>
+<p>},0)</p>
+<p>更简便的写法：箭头函数：</p>
+<p>let total &#x3D; filter(n &#x3D;&gt; n&lt;100).map(n &#x3D;&gt; n*2).reduce((prevalue,n) &#x3D;&gt; prevalue + n)</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/04/07/JavaScript%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-click点击事件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="click"><a href="#click" class="headerlink" title="click"></a>click</h3><p>click点击事件是一个冒泡式点击，在子组件或者说在元素内部的元素有点击事件，其父组件或元素也有点击事件，那么执行子的点击事件，会冒泡式的把父的点击事件也随后执行了，要阻止这样的事情发生，可以使用@click.stop&#x3D;””\，在执行要点击的事件后停止</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/04/07/click%E7%82%B9%E5%87%BB%E4%BA%8B%E4%BB%B6/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-let和var的区别及块级作用域" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="let-与-var-的区别"><a href="#let-与-var-的区别" class="headerlink" title="let 与 var 的区别"></a>let 与 var 的区别</h3><p>es6语法中，关键字let与var相比更完美，let在if和for中有块级作用域，而之前的var只有函数作用域</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/04/07/let%E5%92%8Cvar%E7%9A%84%E5%8C%BA%E5%88%AB%E5%8F%8A%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-前端开发笔记1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前端开发笔记"><a href="#前端开发笔记" class="headerlink" title="前端开发笔记"></a>前端开发笔记</h1><h4 id="一、es6：-let-和-var-区别"><a href="#一、es6：-let-和-var-区别" class="headerlink" title="一、es6： let 和 var 区别"></a>一、es6： let 和 var 区别</h4><p>1、<a target="_blank" rel="noopener" href="https://es6.ruanyifeng.com/#docs/let">https://es6.ruanyifeng.com/#docs/let</a></p>
+<h4 id="二、nodejs-express-安装报错问题"><a href="#二、nodejs-express-安装报错问题" class="headerlink" title="二、nodejs express 安装报错问题"></a>二、nodejs express 安装报错问题</h4><p>1、<a target="_blank" rel="noopener" href="https://georgedage.blog.csdn.net/article/details/102886513?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2.not_use_machine_learn_pai&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2.not_use_machine_learn_pai">https://georgedage.blog.csdn.net/article/details/102886513?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2.not_use_machine_learn_pai&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2.not_use_machine_learn_pai</a></p>
+<h3 id="三、点击事件"><a href="#三、点击事件" class="headerlink" title="三、点击事件"></a>三、点击事件</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43081805/article/details/89373767">https://blog.csdn.net/weixin_43081805/article/details/89373767</a> null</p>
+<h3 id="杂谈"><a href="#杂谈" class="headerlink" title="杂谈"></a>杂谈</h3><p>jQuery 入口函数与 JavaScript 入口函数的区别：</p>
+<ul>
+<li>jQuery 的入口函数是在 html 所有标签(DOM)都加载之后，就会去执行。</li>
+<li>JavaScript 的 window.onload 事件是等到所有内容，包括外部图片之类的文件加载完后，才会执行。</li>
+</ul>
+<p><img src="https://www.runoob.com/wp-content/uploads/2019/05/20171231003829544.jpeg" alt="img"></p>
+<p>css3弹性布局内容对齐（justify-content）属性详解</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/iefreer/article/details/50775887">https://blog.csdn.net/iefreer/article/details/50775887</a></p>
+<p>属性详解漏了 space-evenly</p>
+<p>flex布局：<a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html</a></p>
+<p>css水平垂直居中：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/yugege/p/5246652.html">https://www.cnblogs.com/yugege/p/5246652.html</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/04/07/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B01/">展开全文 >></a>
         </p>
       
 
